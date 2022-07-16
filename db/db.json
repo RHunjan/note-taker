@@ -1,14 +1,19 @@
-
-
-{ "notes":
-[
+{
+  "notes": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "Walk Dog",
+      "text": "Fluffy needs a walk",
+      "id": "1"
     },
     {
-        "title":"Test2 Title",
-        "text":"Test2 text"
+      "title": "Take out trash",
+      "text": "Trash needs to be taken out",
+      "id": "2"
+    },
+    {
+      "title": "Wash another neighbours car",
+      "text": "lots of good deeds",
+      "id": "2"
     }
-]
+  ]
 }
