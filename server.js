@@ -14,7 +14,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+//helps public files work - e.g., CSS
 app.use(express.static('public'));
 
 
@@ -45,6 +45,10 @@ app.post('/api/notes', (req, res) => {
     const newNote = createNewNote(req.body, notes);
     console.log(req.body);
     res.json(req.body);
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 
