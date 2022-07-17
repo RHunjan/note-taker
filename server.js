@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const app = express();
 
 const {notes} = require('./db/db');
 const { stringify } = require('querystring');
@@ -8,7 +9,7 @@ const { stringify } = require('querystring');
 
 const PORT = process.env.PORT || 3001;
 
-const app = express();
+
 
 //interprets the post request as json
 app.use(express.urlencoded({ extended: true }));
@@ -21,17 +22,22 @@ app.use(express.static('public'));
 //create a new note
 
 function createNewNote(body, notesArray) {
-  const note = body;
-  notesArray.push(note);
+  const newNote = body;
+  //empty array for first note
+  if(!Array.isArray(notesArray)){
+    notesArray = [];
+  }
+   notesArray.push(newNote);
   fs.writeFileSync(
     path.join(__dirname, './db/db.json'),
-    JSON.stringify({ notes: notesArray }, null, 2)
+    JSON.stringify({notesArray }, null, 2)
   );
-  return note;
+  return newNote;
 }
 
 
 
+//app apits
 
 app.get('/api/notes', (req, res) => {
     res.json(notes);
@@ -40,11 +46,11 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     //set id
     req.body.id = notes.length.toString();
+  
+    createNewNote(req.body, notes);
 
-    //add note to notes array
-    const newNote = createNewNote(req.body, notes);
-    console.log(req.body);
     res.json(req.body);
+
 });
 
 //add html api routes
