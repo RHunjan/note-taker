@@ -47,9 +47,21 @@ app.post('/api/notes', (req, res) => {
     res.json(req.body);
 });
 
-app.get('/', (req, res) => {
+//add html api routes
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
+
+app.get("/notes", (req,res) => {
+  res.sendFile(path.join(__dirname, './public/notes.html' ));
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+
+
 
 
 app.listen(PORT, () => {
