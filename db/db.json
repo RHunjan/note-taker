@@ -1,22 +1,19 @@
 {
   "notesArray": [
     {
-      "title": "Walk Dog",
-      "text": "Fluffy needs a walk",
-      "id": "1"
+      "title": "First note",
+      "text": "1",
+      "id": 1
     },
     {
-      "title": "Take out trash",
-      "text": "Trash needs to be taken out",
-      "id": "2"
+      "title": "second note",
+      "text": "2",
+      "id": 2
     },
     {
-      "title": "A",
-      "text": "thing"
-    },
-    {
-      "title": "Another thing",
-      "text": "this is the other thing"
+      "title": "Third note",
+      "text": "3",
+      "id": 3
     }
   ]
 }

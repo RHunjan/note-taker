@@ -28,7 +28,10 @@ res.json(notesArray);
 
 function createNewNote(body, notesArray) {
   const newNote = body;
+
   notesArray.push(newNote);
+  body.id = notesArray.length;
+  
   fs.writeFileSync(
     path.join(__dirname, './db/db.json'),
     JSON.stringify({notesArray }, null, 2)
@@ -42,6 +45,9 @@ app.post('/api/notes', (req, res) => {
   
     //add note to notes array
     const newNote = createNewNote(req.body, notesArray);
+    
+    var id = notesArray.length
+    req.body.id = id;
     console.log(req.body);
     res.json(req.body);
 });
