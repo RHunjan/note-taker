@@ -11,39 +11,12 @@
       "id": "2"
     },
     {
-      "title": "Wash another neighbours car",
-      "text": "lots of good deeds",
-      "id": "2"
+      "title": "A",
+      "text": "thing"
     },
     {
-      "title": "Wash BLUE another neighbours car",
-      "text": "lots of good deeds",
-      "id": "3"
-    },
-    {
-      "title": "Wash A TTT BLUE another neighbours car",
-      "text": "lots of good deeds",
-      "id": "4"
-    },
-    {
-      "title": "Wash A TTT BLUE another neighbours car",
-      "text": "Baby Baby Baby",
-      "id": "5"
-    },
-    {
-      "title": "Something else",
-      "text": "something",
-      "id": "6"
-    },
-    {
-      "title": "Hello",
-      "text": "i think this works!\n",
-      "id": "7"
-    },
-    {
-      "title": "A new something",
-      "text": "Testing one two three",
-      "id": "8"
+      "title": "Another thing",
+      "text": "this is the other thing"
     }
   ]
 }
