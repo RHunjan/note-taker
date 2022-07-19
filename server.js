@@ -5,10 +5,12 @@ const express = require('express');
 
 const {notesArray} = require('./db/db');
 const { stringify } = require('querystring');
+
  
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
 
 //interprets the post request as json
 app.use(express.urlencoded({ extended: true }));
@@ -30,27 +32,25 @@ function createNewNote(body, notesArray) {
   const newNote = body;
 
   notesArray.push(newNote);
-  body.id = notesArray.length;
-  
-  fs.writeFileSync(
+  var id = notesArray.length + Math.floor(Math.random()*100);
+  body.id =  id;
+  //write to db.json file
+    fs.writeFileSync(
     path.join(__dirname, './db/db.json'),
     JSON.stringify({notesArray }, null, 2)
   );
   return newNote;
 }
 
-
-
 app.post('/api/notes', (req, res) => {
   
     //add note to notes array
     const newNote = createNewNote(req.body, notesArray);
-    
-    var id = notesArray.length
-    req.body.id = id;
     console.log(req.body);
     res.json(req.body);
 });
+
+
 
 //add html api routes
 app.get("/", (req, res) => {

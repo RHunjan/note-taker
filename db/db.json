@@ -1,19 +1,64 @@
 {
   "notesArray": [
     {
-      "title": "First note",
-      "text": "1",
-      "id": 1
+      "title": "Another saved note",
+      "text": "Second ntoe",
+      "id": 63
     },
     {
-      "title": "second note",
-      "text": "2",
-      "id": 2
+      "title": "A third ntoe",
+      "text": "note note note",
+      "id": 32
     },
     {
-      "title": "Third note",
-      "text": "3",
-      "id": 3
+      "title": "can i delete this",
+      "text": "lll",
+      "id": 87
+    },
+    {
+      "title": "sksks",
+      "text": "sfds",
+      "id": 48
+    },
+    {
+      "title": "sfdds",
+      "text": "sdfsd",
+      "id": 22
+    },
+    {
+      "title": "sss",
+      "text": "sss",
+      "id": 92
+    },
+    {
+      "title": "Another saved note",
+      "text": "Second ntoe",
+      "id": 63
+    },
+    {
+      "title": "A third ntoe",
+      "text": "note note note",
+      "id": 32
+    },
+    {
+      "title": "can i delete this",
+      "text": "lll",
+      "id": 87
+    },
+    {
+      "title": "sksks",
+      "text": "sfds",
+      "id": 48
+    },
+    {
+      "title": "sfdds",
+      "text": "sdfsd",
+      "id": 22
+    },
+    {
+      "title": "sss",
+      "text": "sss",
+      "id": 92
     }
   ]
 }
