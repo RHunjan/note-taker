@@ -1,6 +1,7 @@
 {
   "notesArray": [
     {
+<<<<<<< HEAD
       "title": "Take a walk in the flowers",
       "text": "Nature is good for you",
       "id": "9ehGvkF3F"
@@ -10,5 +11,8 @@
       "text": "These are yummy",
       "id": "GzmuQJXsp"
     }
+=======
+
+>>>>>>> a97120bf55ef94e02a257410127525b9f2de261b
   ]
 }
