@@ -64,7 +64,6 @@ app.delete('/api/notes/:{id}', (req, res) =>{
  
 });
 
-
 //add html api routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
