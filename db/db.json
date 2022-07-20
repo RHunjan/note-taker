@@ -1,6 +1,7 @@
 {
   "notesArray": [
     {
+<<<<<<< HEAD
       "title": "Plant some flowers",
       "text": "Flowers are good for you",
       "id": 78
@@ -14,6 +15,21 @@
       "title": "Take a nap",
       "text": "Rest is lovely",
       "id": 32
+=======
+      "title": "First",
+      "text": "note",
+      "id": "_xbNerjw4"
+    },
+    {
+      "title": "Second ",
+      "text": "note",
+      "id": "1rJZ-6eMN"
+    },
+    {
+      "title": "Read a book",
+      "text": "Reading is like taking an adventure!",
+      "id": "NIgq_UmEk"
+>>>>>>> feature/delete
     }
   ]
 }

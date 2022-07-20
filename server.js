@@ -2,9 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const short = require('shortid');
 
 const {notesArray} = require('./db/db');
-const { stringify } = require('querystring');
+
 
  
 
@@ -32,7 +33,7 @@ function createNewNote(body, notesArray) {
   const newNote = body;
 
   notesArray.push(newNote);
-  var id = notesArray.length + Math.floor(Math.random()*100);
+  var id = short();
   body.id =  id;
   //write to db.json file
     fs.writeFileSync(
@@ -46,10 +47,22 @@ app.post('/api/notes', (req, res) => {
   
     //add note to notes array
     const newNote = createNewNote(req.body, notesArray);
-    console.log(req.body);
-    res.json(req.body);
+     res.json(req.body);
 });
 
+//delete a note
+
+app.delete('/api/notes/:{id}', (req, res) =>{
+  const {id} = req.params.id;
+  notesArray = notesArray.filter(note => note != id);
+  //write to db.json file
+    fs.writeFileSync(
+    path.join(__dirname, './db/db.json'),
+    JSON.stringify({notesArray }, null, 2)
+  );
+  res.json(notesArray);
+ 
+});
 
 //add html api routes
 app.get("/", (req, res) => {
