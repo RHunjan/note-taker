@@ -1,6 +1,19 @@
-[
+{
+  "notesArray": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "Plant some flowers",
+      "text": "Flowers are good for you",
+      "id": 78
+    },
+    {
+      "title": "Take a walk",
+      "text": "Fresh air is important",
+      "id": 76
+    },
+    {
+      "title": "Take a nap",
+      "text": "Rest is lovely",
+      "id": 32
     }
-]
+  ]
+}
