@@ -50,19 +50,6 @@ app.post('/api/notes', (req, res) => {
      res.json(req.body);
 });
 
-//delete a note
-
-app.delete('/api/notes/:{id}', (req, res) =>{
-  const {id} = req.params.id;
-  notesArray = notesArray.filter(note => note != id);
-  //write to db.json file
-    fs.writeFileSync(
-    path.join(__dirname, './db/db.json'),
-    JSON.stringify({notesArray }, null, 2)
-  );
-  res.json(notesArray);
- 
-});
 
 //add html api routes
 app.get("/", (req, res) => {
